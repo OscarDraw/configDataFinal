@@ -51,20 +51,20 @@ resilience4j:
             - java.net.ConnectException
 
           
-circuitbreaker:
-  configs:
-    default:
-      register-health-indicator: true
-      sliding-window-size: 10
-      minimum-number-of-calls: 5
-      permitted-number-of-calls-in-half-open-state: 3
-      wait-duration-in-open-state: 30s
-      automatic-transition-from-open-to-half-open-enabled: true
-      failure-rate-threshold: 50
-  instances:
-    showCatalog:
-      base-config: default
-      sliding-window-type: COUNT_BASED
-      sliding-window-size: 5
-      wait-duration-in-open-state: 1m
-      failure-rate-threshold: 40
+  circuitbreaker:
+    configs:
+      default:
+        register-health-indicator: true
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        permitted-number-of-calls-in-half-open-state: 3
+        wait-duration-in-open-state: 30s
+        automatic-transition-from-open-to-half-open-enabled: true
+        failure-rate-threshold: 50
+    instances:
+      showCatalog:
+        base-config: default
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 5
+        wait-duration-in-open-state: 1m
+        failure-rate-threshold: 40
