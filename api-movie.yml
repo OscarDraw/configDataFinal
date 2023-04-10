@@ -14,6 +14,11 @@ spring:
   mongodb:
     embedded:
       version: 4.0.2
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/movie-dev?createDatabaseIfNotExist=true&useUnicode=true&amp&characterEncoding=utf-8&autoReconnect=true
+    username: usr-movie
+    password: pwd-movie
   data:
     mongodb:
       database: movies-dev
